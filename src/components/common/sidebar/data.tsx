@@ -5,12 +5,103 @@ import {
   TableIcon,
   UserIcon,
   Widget4Icon,
-  WindowIcon
+  WindowIcon,
 } from "./icon";
+import {
+  Building2,
+  Users,
+  Sparkles,
+  Sliders,
+} from "lucide-react";
 
 export const NAV_DATA = [
   {
-    label: "MAIN MENU",
+    label: "REAL ESTATE CRM (6O)",
+    items: [
+      {
+        title: "Properties",
+        icon: <Building2 className="size-[18px]" />,
+        items: [
+          {
+            title: "Overview",
+            url: "/overview",
+          },
+          {
+            title: "Sales Inventory",
+            url: "/sales",
+          },
+          {
+            title: "Rent Inventory",
+            url: "/rent",
+          },
+          {
+            title: "Sales Reports",
+            url: "/reports",
+          },
+          {
+            title: "Compound Map",
+            url: "/map",
+          },
+          {
+            title: "GIS Regional Map",
+            url: "/geo",
+          },
+        ],
+      },
+      {
+        title: "Operations & Sales",
+        icon: <Users className="size-[18px]" />,
+        items: [
+          {
+            title: "Clients & Leads",
+            url: "/clients",
+          },
+          {
+            title: "Tasks & Workload",
+            url: "/tasks",
+          },
+          {
+            title: "Contracts & Commissions",
+            url: "/contracts",
+          },
+          {
+            title: "Property Owners",
+            url: "/owners",
+          },
+          {
+            title: "Calendar & Viewings",
+            url: "/calendar",
+          },
+        ],
+      },
+      {
+        title: "AI & Content Studio",
+        icon: <Sparkles className="size-[18px]" />,
+        items: [
+          {
+            title: "Gemini Copilot",
+            url: "/gemini",
+          },
+          {
+            title: "Blog & Articles",
+            url: "/articles",
+          },
+          {
+            title: "Landing Page CMS",
+            url: "/landing-page-cms",
+          },
+        ],
+      },
+      {
+        title: "System Settings",
+        url: "/settings",
+        icon: <Sliders className="size-[18px]" />,
+        items: [],
+      },
+    ],
+  },
+  {
+    label: "NEXTADMIN UI KIT",
     items: [
       {
         title: "Dashboard",
@@ -20,7 +111,6 @@ export const NAV_DATA = [
             title: "E-commerce",
             url: "/",
           },
-          
         ],
       },   
       {
@@ -41,7 +131,6 @@ export const NAV_DATA = [
       },
       {
         title: "Tables",
-        url: "/tables",
         icon: <TableIcon />,
         items: [
           {
@@ -71,7 +160,7 @@ export const NAV_DATA = [
     ],
   },
   {
-    label: "OTHERS",
+    label: "COMPONENTS",
     items: [
       {
         title: "Charts",

@@ -2,6 +2,7 @@
 
 import { MenuIcon } from "@/components/common/header/icons";
 import ThemeToggle from "@/components/common/header/theme-toggle";
+import LanguageToggle from "@/components/common/header/language-toggle";
 import { UserProfileButton } from "@/components/common/header/user-profile";
 import { ThreeDots } from "@/components/common/sidebar/icon";
 import { cn } from "@/utils/cn";
@@ -25,7 +26,7 @@ export default function Header({ onMenuClick }: { onMenuClick?: () => void }) {
               id="mobile-menu-toggle"
               onClick={onMenuClick}
               aria-label="Open sidebar menu"
-              className="rounded-md px-1.5 py-1 text-icon-tertiary transition-colors hover:text-text-primary"
+              className="rounded-md px-1.5 py-1 text-icon-tertiary transition-colors hover:text-text-primary cursor-pointer"
             >
               <MenuIcon />
             </button>
@@ -43,7 +44,7 @@ export default function Header({ onMenuClick }: { onMenuClick?: () => void }) {
               onClick={() => setIsDrawerOpen(!isDrawerOpen)}
               aria-label="Open quick access"
               className={cn(
-                "rounded-md px-1.5 py-3 transition-colors",
+                "rounded-md px-1.5 py-3 transition-colors cursor-pointer",
                 isDrawerOpen
                   ? "bg-background-gray-secondary text-text-primary"
                   : "text-icon-tertiary hover:text-text-primary",
@@ -63,6 +64,7 @@ export default function Header({ onMenuClick }: { onMenuClick?: () => void }) {
 
           {/* Right Side - Actions */}
           <div className="flex items-center gap-2.5">
+            <LanguageToggle />
             <ThemeToggle />
             <NotificationsButton />
             <UserProfileButton />
@@ -83,6 +85,7 @@ function MobileInfoDrawer({ isOpen }: { isOpen: boolean }) {
       <div className="px-5 py-4 shadow-xs">
         <div className="flex items-center justify-between gap-2.5">
           <div className="flex items-center gap-2.5">
+            <LanguageToggle />
             <NotificationsButton />
             <ThemeToggle />
             <SearchBar />
